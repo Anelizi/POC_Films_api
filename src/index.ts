@@ -1,6 +1,9 @@
+import "express-async-errors";
 import express, { json } from "express";
+import dotenv from "dotenv";
 import router from "@/routers/films-router";
 
+dotenv.config();
 const app = express();
 app.use(json());
 app.use(router);
